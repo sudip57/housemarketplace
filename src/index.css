@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply box-border;
+}
+
+html::-webkit-scrollbar {
+  @apply hidden;
+}
+
+body {
+  @apply bg-[#f2f4f8] m-0 box-border font-Montserrat;
+}
+
+.navbar {
+  @apply fixed h-[85px] bg-white z-[1000] flex justify-center items-center bottom-0 inset-x-0;
+}
+
+.navbarNav {
+  @apply w-full  mt-3;
+}
+
+.navbarListItems {
+  @apply flex justify-evenly items-center m-0 p-0;
+}
+
+.navbarListItem {
+  @apply cursor-pointer flex flex-col items-center;
+}
+
+.navbarListItemName,
+.navbarListItemNameActive {
+  @apply text-sm font-semibold text-[#8f8f8f] mt-1;
+}
+.navbarListItemNameActive {
+  @apply text-[#2c2c2c];
+}
+
+.pageHeader {
+  @apply text-[2rem] font-extrabold;
+}
+
+.pageContainer {
+  @apply m-4;
+}
+
+.emailSvg {
+  @apply mb-[1.5rem] bg-personIcon  bg-[2.5%] bg-no-repeat;
+}
+
+.passwordSvg {
+  @apply mb-[1.5rem] bg-lockIcon  bg-[2.5%] bg-no-repeat;
+}
+
+.nameSvg {
+  @apply mb-[1.5rem] bg-badgeIcon  bg-[2.5%] bg-no-repeat;
+}
+
+.inputField {
+  @apply shadow-[rgba(0,0,0,0.11)] h-12 w-[18rem] sm:w-[30rem]  text-base px-12 py-0 rounded-[3rem] border-[none] font-Montserrat bg-[#ffffff];
+}
+textarea {
+  @apply shadow-[rgba(0,0,0,0.11)] h-12 w-[18rem] sm:w-[30rem] outline-none  text-base px-12 py-0 rounded-lg resize-none border-[none] font-Montserrat bg-[#ffffff];
+}
+
+.showPassword {
+  @apply cursor-pointer absolute top-[-4%] p-4 right-[1%];
+}
+
+.forgotPasswordLink {
+  @apply cursor-pointer text-[#00cc66] font-semibold text-right relative sm:-left-[1rem];
+}
+
+.signBar {
+  @apply flex justify-between items-center gap-[8rem] sm:gap-[20rem]  mt-8;
+}
+
+.signUpBar {
+  @apply flex justify-between items-center gap-[8rem] sm:gap-[20rem]  mt-4;
+}
+
+.signButton {
+  @apply flex justify-center items-center w-12 h-12 bg-[#00cc66] rounded-[50%] cursor-pointer lg:ml-3;
+}
+
+.signText {
+  @apply text-2xl font-bold cursor-pointer;
+}
+
+.registerLink {
+  @apply text-[#00cc66] font-semibold items-center flex justify-center text-center;
+}
+
+.profileHeader {
+  @apply flex justify-between items-center;
+}
+
+.logOut {
+  @apply cursor-pointer text-base font-semibold text-white bg-[#00cc66] px-3 py-1 rounded-2xl font-Montserrat;
+}
+
+.profileDetailsHeader {
+  @apply flex justify-between max-w-[500px];
+}
+.personalDetailsText {
+  @apply font-semibold;
+}
+.changePersonalDetails {
+  @apply cursor-pointer font-semibold text-[#00cc66];
+}
+
+.profileCard {
+  @apply bg-white shadow-[rgba(0,0,0,0.2)] max-w-[500px] p-2 rounded-xl;
+}
+
+.profileName {
+  @apply font-semibold w-full mx-0 my-[0.3rem];
+}
+.profileNameActive {
+  @apply bg-[rgba(44,44,44,0.1)];
+}
+input {
+  @apply bg-white;
+}
+
+.loadingSpinnerContainer {
+  @apply fixed bg-[rgba(0,0,0,0.5)] z-[5000] flex justify-center items-center inset-0;
+}
+
+.loadingSpinner {
+  @apply w-16 h-16 animate-spin rounded-[50%] border-8 border-solid border-[#00cc66_transparent_#00cc66_transparent];
+}
+
+.forgotPasswordBar {
+  @apply flex justify-between items-center mt-12;
+}
+
+.socialLogin {
+  @apply flex flex-col items-center mt-3;
+}
+
+.socialIconDiv {
+  @apply cursor-pointer flex justify-center items-center w-12 h-12 bg-white shadow-[0_4px_8px_0_rgba(0,0,0,0.1)] m-6 p-3 rounded-[50%];
+}
+.socialIconImg {
+  @apply w-full;
+}
+
+.exploreCategories {
+  @apply flex justify-between;
+}
+.exploreCategories a {
+  @apply w-[48%];
+}
+
+.exploreCategoryImg {
+  @apply min-h-[115px] h-[15vw] w-full object-cover mx-auto my-0 rounded-3xl;
+}
+
+.categoryListing {
+  @apply flex justify-between items-center relative mb-4;
+}
+
+.categoryListingImg {
+  @apply w-[30%] h-[100px] object-cover rounded-3xl lg:w-[19%] lg:h-[217px];
+}
+
+.categoryListingLocation {
+  @apply font-semibold text-[0.7rem] opacity-80 mb-0;
+}
+
+.categoryListingName {
+  @apply font-semibold text-xl m-0;
+}
+.categoryListingPrice {
+  @apply font-semibold text-[1.1rem] text-[#00cc66] flex mt-1 items-center  mb-0;
+}
+
+.categoryListingInfoDiv {
+  @apply flex justify-between max-w-[275px];
+}
+
+.categoryListingInfoText {
+  @apply font-medium text-[0.7rem];
+}
+
+.createListing {
+  @apply bg-white shadow-[rgba(0,0,0,0.2)] font-semibold max-w-[500px] flex justify-between items-center mt-8 px-4 py-1 rounded-2xl;
+}
+
+.formLabel {
+  @apply font-semibold block mt-4;
+}
+.formButtons {
+  @apply flex;
+}
+.formButton {
+  @apply bg-white font-semibold text-base flex justify-center items-center ml-0 mr-2 mt-2 mb-0 px-12 py-[0.9rem] rounded-2xl;
+}
+.formButtonActive {
+  @apply bg-[#00cc66] text-white font-semibold text-base flex justify-center items-center ml-0 mr-2 mt-2 mb-0 px-12 py-[0.9rem] rounded-2xl;
+}
+.imagesInfo {
+  @apply text-[0.9rem] opacity-75;
+}
+
+.primaryButton {
+  @apply cursor-pointer text-white font-semibold text-xl w-4/5 flex items-center justify-center mx-auto my-0 px-8 py-[0.85rem] rounded-2xl bg-[#00cc66] mt-[2rem] mb-[5rem] md:mb-[10rem];
+}
+
+.shareIconDiv {
+  @apply cursor-pointer fixed z-[2] bg-white w-12 h-12 flex justify-center items-center rounded-[50%] right-[5%] top-[3%];
+}
+
+.linkCopied {
+  @apply fixed z-[2] bg-white font-semibold px-4 py-2 rounded-2xl right-[5%] top-[12%];
+}
+.listingName {
+  @apply font-semibold text-2xl mb-2;
+}
+
+.discountPrice {
+  @apply bg-black text-white text-[0.8rem] font-semibold inline px-2 py-1 rounded-2xl;
+}
+.listingType {
+  @apply bg-[#00cc66] text-white inline font-semibold text-[0.8rem] mr-4 px-2 py-1 rounded-[2rem];
+}
+
+.listingDetailsList li {
+  @apply font-medium opacity-80 mx-0 my-[0.3rem];
+}
+
+.messageDiv {
+  @apply flex flex-col mt-8 mb-16;
+}
+
+.contactLandlord {
+  @apply flex items-center mt-8;
+}
+
+.leafletContainer {
+  @apply w-full h-[200px] overflow-x-hidden mb-12;
+}
+
+.swiperSlideDiv {
+  @apply relative  w-full  h-[20rem];
+}
+
+.swiperSlideText {
+  @apply text-white absolute font-semibold max-w-[90%] text-xl bg-[rgba(0,0,0,0.8)] p-2 left-0 top-[70px] lg:text-[1.75rem];
+}
+
+.swiperSlidePrice {
+  @apply text-black absolute font-semibold max-w-[90%] bg-white px-2 py-1 rounded-2xl left-[11px] top-[143px];
+}
+
+.listingsList {
+  @apply p-0 mb-[6rem];
+}
+
+.loadMore {
+  @apply cursor-pointer w-32 text-center bg-black text-white font-semibold opacity-70 mt-8 mx-auto my-0 px-2 py-1 rounded-2xl;
+}
+
+.removeIcon {
+  @apply cursor-pointer absolute top-[-3%] right-[-2%];
+}
+
+.editIcon {
+  @apply cursor-pointer absolute top-[-3.4%] right-5;
+}
